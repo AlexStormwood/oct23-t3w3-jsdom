@@ -19,12 +19,17 @@ let animals = [
 ];
 
 function createAnimalList(){
+
+	animals = [...new Set(animals)];
+
+
 	animals.forEach((animal) => {
 		console.log("animal: " + animal);
 
 		// 1. Create a li element with animal value as its text
 		let newList = document.createElement("li");
 		newList.textContent = animal;
+		// newList.innerHTML = `<h6> ${animal} </h6>`
 		newList.id = animal;
 
 		// 1b. Add a button to remove the element from the list 
@@ -48,6 +53,7 @@ function createAnimalList(){
 function removeAnimalFromList(targetAnimalId){
 	// 1. Find element in list with matching ID 
 	let targetListItem = document.getElementById(targetAnimalId);
+	targetListItem = document.getElementsByClassName
 	targetListItem.remove();
 
 	// 2. Check if ID is in array of animals 
