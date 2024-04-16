@@ -19,3 +19,7 @@ function changeCssTheme(themeName){
 }
 
 changeCssTheme("dark");
+
+console.log('Hello from Alex\'s code');
+console.log("Hello from Alex's code");
+
