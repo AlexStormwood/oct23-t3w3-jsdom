@@ -48,10 +48,6 @@ function toggleCssTheme(){
 }
 
 
-
-
-
-
 changeCssTheme("dark");
 
 
