@@ -95,9 +95,24 @@ function addAnimalToList(event, targetInputId){
 	console.log("Input field value to add to list is: " + foundInputFieldValue);
 
 
-	// 2.5 Validate for empty and duplicate data in the input field
-	// array.filter or Set to check for duplicate
+	// 2.5 Sanitise & Validate for empty and duplicate data in the input field
+	// Remove whitespace from start and end of input
+	foundInputFieldValue = foundInputFieldValue.trim();
+
+	// array.include, array.filter or Set to check for duplicate
+	if (animals.includes(foundInputFieldValue)){
+		console.log("Animal already in list, not adding");
+		// 3.5 Reset the input field 
+		targetInputField.value = "";
+		return;
+	}
 	// checking for empty string 
+	if (foundInputFieldValue.length == 0){
+		console.log("Animal was empty, not adding!");
+		// 3.5 Reset the input field 
+		targetInputField.value = "";
+		return;
+	}
 
 	// 3. Push the text value into the animals array 
 	animals.push(foundInputFieldValue);
