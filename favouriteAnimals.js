@@ -53,7 +53,7 @@ function createAnimalList(){
 function removeAnimalFromList(targetAnimalId){
 	// 1. Find element in list with matching ID 
 	let targetListItem = document.getElementById(targetAnimalId);
-	targetListItem = document.getElementsByClassName
+	// targetListItem = document.getElementsByClassName
 	targetListItem.remove();
 
 	// 2. Check if ID is in array of animals 
